@@ -1,3 +1,13 @@
+Projekt ma modułową architekture, moim założeniem było to aby każda strona miała swój osobny moduł, który będzie ładowany leniwie.
+Poza modułem dedykowanym stronie głównej stworzyłem też Core module i Shared module. Tutaj założeniem było, że w Core Module będą się
+znajdywać rzeczy, którę będą wykorzystywane na wszystkich stronach(stąd obecność tam Navbara i Contact Forma- założyłem, że Contact Form)
+będzie na każdej stronie). W Shared Module znajduję się tylko HeroComponent- tutaj z kolei zakładałem, że na jakichś podstronach mógłbyć
+wykorzystywany ponownie(można było wtedy wprowadzić tam kilka @Inputów i wprowadzać treść każdorazowo z poziomu komponentu, który by go 
+implementował). Gdzie niegdzie wykorzystałem ViewChild i ViewChildren do modyfikacji DOMem, w Contact Form trochę skorzystałem z 
+Angular Material. Scss dzieliłem na foldery. W komponentach dodawałem reguły, które w mojej ocenie nie byłyby 
+wykorzystywany globalnie. Takie z kolei dodawałem do podfolderów folderu /scss.
+
+
 # Rokezzz
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
