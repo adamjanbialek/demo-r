@@ -1,0 +1,69 @@
+@import "../../../scss/styles";
+
+:host {
+  @include displayJustifySBetweenAlignCenter();
+  position: relative;
+  width: 1320px;
+  padding-top: 80px;
+  height: 750px;
+  margin-inline: auto;
+}
+
+h1 {
+  color: $beige;
+
+  img {
+    height: 85px;
+    width: 260px;
+    object-fit: cover;
+    border-radius: 32px;
+    vertical-align: bottom;
+  }
+}
+
+p {
+  margin-top: 30px;
+  color: $dark-grey;
+}
+
+.text-container {
+  @include displayJustifyAlignCenter();
+  flex-direction: column;
+}
+
+.img-container {
+  position: relative;
+  width: 550px;
+  height: 550px;
+
+  img {
+    z-index: 2;
+    border-radius: 64px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: $mobile-phone) {
+  :host {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 110px 24px 90px;
+    box-sizing: border-box;
+    height: fit-content;
+  }
+
+  .text-container {
+    img {
+      height: 50px;
+      width: 160px;
+    }
+  }
+
+  .img-container {
+    margin-top: 60px;
+    width: 100%;
+    height: 290px;
+  }
+}

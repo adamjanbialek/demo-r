@@ -1,0 +1,28 @@
+.button {
+  font-size: 24px;
+  padding: 16px 24px;
+  border-radius: 40px;
+  transition: 0.2s ease-in;
+  letter-spacing: 0.07em;
+  border: none;
+  cursor: pointer;
+  color: $beige;
+  background-color: $grey;
+
+  &:hover {
+    background-color: $orange-red;
+  }
+
+  &--clean {
+    background-color: unset;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  &--round {
+    border-radius: 50%;
+    padding: 0;
+  }
+}

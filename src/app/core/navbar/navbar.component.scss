@@ -1,0 +1,137 @@
+@import "../../../scss/styles";
+
+.mat-toolbar-single-row {
+  height: 100px;
+}
+
+.nav-bar--mobile {
+  display: none;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: -100px;
+  height: 100px;
+  z-index: 10001;
+  background-color: $beige;
+  transition: .2s all;
+
+  &.nav-bar--visible {
+    top: 0;
+  }
+
+  .navbar-container {
+    display: flex;
+    width: 1320px;
+    margin-inline: auto;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $dark-grey;
+
+    p {
+      margin-left: 24px;
+    }
+  }
+
+  .links-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+
+    .subpage-link {
+      padding-inline: 16px;
+      text-decoration: none;
+      color: $grey;
+      transition: .2s ease-in;
+
+      &:hover {
+        color: $orange-red;
+      }
+
+      &--with-bg {
+        p {
+          padding: 16px 24px;
+          border-radius: 40px;
+          transition: .2s ease-in;
+          color: $beige;
+          background-color: $orange-red;
+
+          &:hover {
+            color: $beige;
+            background-color: $grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-phone) {
+  .mat-toolbar-single-row {
+    height: 64px;
+  }
+
+  .nav-bar--desktop {
+    display: none;
+  }
+
+  .nav-bar--mobile {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    transition: .3s all ease-in;
+
+    &--opened {
+      height: 100%;
+    }
+
+    .navbar-container {
+      position: relative;
+      width: 100%;
+      justify-content: center;
+      .mat-button-toggle {
+        margin-left: auto;
+      }
+      .links-container {
+        position: absolute;
+        top: 100%;
+        margin-top: 125px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .subpage-link {
+        p {
+          font-size: 22px;
+          line-height: 1em;
+        }
+
+        &:not(:first-of-type) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  mat-toolbar {
+    .logo {
+      height: 64px;
+      width: 64px;
+    }
+
+    .links-container {
+      display: none;
+    }
+  }
+}

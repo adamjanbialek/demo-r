@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "globals/reset-styles";
+@import "abstract/variables";
+@import "globals/fonts";
+@import "globals/typography";
+@import "globals/custom-theme";
+@import "globals/layout";
+@import "layout/buttons";
+@import "layout/forms";
+
+h1, h2, h3, p, span, label, input, textarea, button, mat-form-field {
+  font-family: InterTight,sans-serif;
+}
+
+@mixin displayJustifyAlignCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin displayJustifySBetweenAlignCenter() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

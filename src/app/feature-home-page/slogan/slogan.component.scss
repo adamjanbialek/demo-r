@@ -1,0 +1,101 @@
+@import "../../../scss/styles";
+
+:host {
+  margin-top: 120px;
+  display: flex;
+  width: 100%;
+}
+
+.sticky-elements-container {
+  width: 50%;
+  background-color: $grey;
+  color: $beige;
+  padding: calc(50vh + 26px) 0 calc(50vh - 85px);
+
+  .sticky-elements {
+    margin-left: auto;
+    max-width: 660px;
+    position: sticky;
+    top: 50%;
+  }
+}
+
+.sliding-items {
+  width: 50%;
+
+  .img-container {
+    height: 50%;
+  }
+
+  .text-container {
+    padding: 40px 56px;
+    box-sizing: border-box;
+    max-width: 660px;
+
+    p {
+      margin-top: 40px;
+    }
+  }
+
+  .item {
+    height: 100vh;
+
+    &--beige {
+      background-color: $beige;
+      color: $orange-red;
+
+      img {
+        object-position: top;
+      }
+
+      p {
+        color: $grey;
+      }
+    }
+
+    &--grey {
+      background: $dark-grey;
+      color: $beige;
+    }
+
+    &--red {
+      background-color: $orange-red;
+      color: $beige;
+
+      img {
+        object-position: top;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-phone) {
+  :host {
+    margin-top: 0;
+  }
+
+  .sticky-elements-container {
+    width: 72px;
+    padding: 50px 0;
+
+    .sticky-elements {
+      top: 15%;
+      margin-inline: 24px;
+      overflow-wrap: anywhere;
+      width: 24px;
+      text-align: center;
+    }
+  }
+
+  .sliding-items {
+    width: 100%;
+
+    .text-container {
+      padding: 24px 32px;
+
+      p {
+        margin-top: 16px;
+      }
+    }
+  }
+}

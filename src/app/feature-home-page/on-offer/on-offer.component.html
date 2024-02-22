@@ -1,0 +1,95 @@
+<mat-card class="grey-card">
+  <mat-card-header>
+    <div class="icon-container">
+      <img src="assets/img/icons/workout.png">
+      <img src="assets/img/icons/diet.png">
+      <img src="assets/img/icons/waist.png">
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-title>
+      <h3>Twoje ciało</h3>
+    </mat-card-title>
+    <p>
+      Cras quam nisi, fermentum ac faucibus ut, venenatis quis purus.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="red-card">
+  <mat-card-content>
+    <mat-card-title>
+      <h3>Twój <br>cel</h3>
+    </mat-card-title>
+    <p>
+      Duis vestibulum tortor vitae condimentum finibus.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="beige-card">
+  <mat-card-content>
+    <mat-card-title>
+      <h3>
+        Twój trener personalny
+      </h3>
+    </mat-card-title>
+    <p>
+      Proin purus quam, fermentum et aliquam ac, consectetur id magna.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<div class="container slider-container">
+  <div class="button button--round button--left" #btnLeft (click)="clickLeft()">
+    <img src="assets/img/icons/next.png">
+  </div>
+  <div class="button button--round button--right" #btnRight (click)="clickRight()">
+    <img src="assets/img/icons/next.png">
+  </div>
+  <div class="heroHeader__inner slider-item" #sliderItem>
+    <mat-card class="red-card">
+      <mat-card-content>
+        <mat-card-title>
+          <h3>Twój cel</h3>
+        </mat-card-title>
+        <p>
+          Duis vestibulum tortor vitae condimentum finibus.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="heroHeader__inner slider-item" #sliderItem>
+    <mat-card class="grey-card">
+      <mat-card-header>
+        <div class="icon-container">
+          <img src="assets/img/icons/workout.png">
+          <img src="assets/img/icons/diet.png">
+          <img src="assets/img/icons/waist.png">
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-title>
+          <h3>Twoje ciało</h3>
+        </mat-card-title>
+        <p>
+          Cras quam nisi, fermentum ac faucibus ut, venenatis quis purus.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="heroHeader__inner slider-item" #sliderItem>
+    <mat-card class="beige-card">
+      <mat-card-content>
+        <mat-card-title>
+          <h3>
+            Twój trener personalny
+          </h3>
+        </mat-card-title>
+        <p>
+          Proin purus quam, fermentum et aliquam ac, consectetur id magna.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

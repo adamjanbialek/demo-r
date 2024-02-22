@@ -1,0 +1,53 @@
+h1 {
+  font-family: 'InterTight', sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-family: 'InterTight', sans-serif;
+  font-size: 60px;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'InterTight', sans-serif;
+  font-size: 48px;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'InterTight', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0.07em;
+}
+
+span {
+  font-weight: 500;
+}
+
+@media screen and (max-width: $mobile-phone) {
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
